@@ -1,0 +1,16 @@
+{
+  "name": "issuepilot-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "lint": "node --check src/app.js && node --check src/server.js && node --check src/config/env.js && node --check src/config/database.js && node --check src/middleware/error-handler.js && node --check src/middleware/not-found.js && node --check src/routes/health.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1"
+  }
+}
