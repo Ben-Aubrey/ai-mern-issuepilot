@@ -6,12 +6,8 @@ const app = createApp();
 let server;
 
 async function start() {
-  if (env.mongodbUri) {
-    await connectDatabase(env.mongodbUri);
-    console.log('Connected to MongoDB.');
-  } else {
-    console.warn('MONGODB_URI is not set; starting without a database connection.');
-  }
+  await connectDatabase(env.mongodbUri);
+  console.log('Connected to MongoDB.');
 
   server = app.listen(env.port, () => console.log(`API listening on http://localhost:${env.port}`));
 }
